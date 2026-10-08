@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Secure Checkout — Bookly</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+  <header id="siteHeader"></header>
+  <main id="checkoutMain">
+    <section class="section checkout-page">
+      <div class="container">
+        <div class="checkout-progress">
+          <div class="checkout-step active"><span class="step-dot">1</span>Information</div><span class="checkout-line"></span>
+          <div class="checkout-step active"><span class="step-dot">2</span>Delivery</div><span class="checkout-line"></span>
+          <div class="checkout-step active"><span class="step-dot">3</span>Payment</div><span class="checkout-line"></span>
+          <div class="checkout-step"><span class="step-dot">4</span>Confirmed</div>
+        </div>
+        <div class="row g-5">
+          <div class="col-lg-7">
+            <span class="eyebrow">Secure checkout</span>
+            <h1 class="section-title">Finish your booking.</h1>
+            <form id="checkoutForm">
+              <section class="card-bookly card-body-bookly checkout-section">
+                <div class="checkout-section-heading"><span>1</span><div><h2>Customer information</h2><p>Where should we send your booking updates?</p></div></div>
+                <div class="row"><div class="col-md-6 form-group"><label for="firstName">First name</label><input id="firstName" class="input-bookly" autocomplete="given-name" required></div><div class="col-md-6 form-group"><label for="lastName">Last name</label><input id="lastName" class="input-bookly" autocomplete="family-name" required></div></div>
+                <div class="row"><div class="col-md-7 form-group"><label for="checkoutEmail">Email address</label><input id="checkoutEmail" class="input-bookly" type="email" autocomplete="email" required></div><div class="col-md-5 form-group"><label for="checkoutPhone">Phone number</label><input id="checkoutPhone" class="input-bookly" type="tel" autocomplete="tel" required></div></div>
+              </section>
+              <section class="card-bookly card-body-bookly checkout-section mt-4">
+                <div class="checkout-section-heading"><span>2</span><div><h2>Delivery information</h2><p>Select how and when the service should be fulfilled.</p></div></div>
+                <div class="form-group"><label for="serviceAddress">Service or delivery address</label><input id="serviceAddress" class="input-bookly" autocomplete="street-address" required placeholder="Street, city, and postcode"></div>
+                <div class="shipping-options">
+                  <label class="choice-card"><input type="radio" name="shipping" value="standard" data-cost="0" data-label="Standard home visit" data-estimate="Within 2–3 days" checked><span class="choice-icon">⌂</span><span><strong>Standard home visit</strong><small>Provider arrives at your address · Within 2–3 days</small></span><b>Free</b></label>
+                  <label class="choice-card"><input type="radio" name="shipping" value="priority" data-cost="299" data-label="Priority arrival" data-estimate="Within 24 hours"><span class="choice-icon">⚡</span><span><strong>Priority arrival</strong><small>First available priority slot · Within 24 hours</small></span><b>₱299</b></label>
+                  <label class="choice-card"><input type="radio" name="shipping" value="remote" data-cost="0" data-label="Remote session" data-estimate="Same day"><span class="choice-icon">◎</span><span><strong>Remote session</strong><small>Video or online support · Same-day availability</small></span><b>Free</b></label>
+                </div>
+                <div class="delivery-estimate"><span>◷</span><p><strong>Estimated fulfilment:</strong> <span id="deliveryEstimate">Within 2–3 days</span></p></div>
+              </section>
+              <section class="card-bookly card-body-bookly checkout-section mt-4">
+                <div class="checkout-section-heading"><span>3</span><div><h2>Payment method</h2><p>Choose a secure way to complete your order.</p></div></div>
+                <div class="payment-tabs">
+                  <label class="payment-option"><input type="radio" name="payment" value="card" checked><span>▣</span><strong>Card / online</strong><small>Visa, Mastercard</small></label>
+                  <label class="payment-option"><input type="radio" name="payment" value="ewallet"><span>◈</span><strong>E-wallet</strong><small>GCash, PayPal</small></label>
+                  <label class="payment-option"><input type="radio" name="payment" value="cod"><span>₱</span><strong>Pay on service</strong><small>Cash after completion</small></label>
+                </div>
+                <div id="cardFields" class="payment-fields mt-4">
+                  <div class="form-group"><label for="cardName">Name on card</label><input id="cardName" class="input-bookly" autocomplete="cc-name" required></div>
+                  <div class="form-group"><label for="cardNumber">Card number</label><input id="cardNumber" class="input-bookly" inputmode="numeric" autocomplete="cc-number" required placeholder="4242 4242 4242 4242"></div>
+                  <div class="row"><div class="col-6 form-group"><label for="cardExpiry">Expiry</label><input id="cardExpiry" class="input-bookly" autocomplete="cc-exp" required placeholder="MM / YY"></div><div class="col-6 form-group"><label for="cardCvc">CVC</label><input id="cardCvc" class="input-bookly" inputmode="numeric" autocomplete="cc-csc" required placeholder="123"></div></div>
+                </div>
+                <div class="security-notice"><span>🔒</span><p><strong>Your transaction is protected.</strong><small>Payment information is encrypted. This classroom prototype does not transmit real financial data.</small></p></div>
+                <button class="btn-bookly btn-accent btn-lg btn-full" type="submit">Confirm order securely</button>
+              </section>
+            </form>
+          </div>
+          <div class="col-lg-5"><aside class="card-bookly card-body-bookly sticky-card checkout-summary"><span class="chip chip-accent">🔒 Protected order</span><h2>Order summary</h2><p class="text-muted">Your selected services and fulfilment method.</p></aside></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer id="siteFooter"></footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
