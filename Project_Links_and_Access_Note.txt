@@ -1,0 +1,51 @@
+BOOKLY - PROJECT LINKS AND ACCESS NOTE
+
+Project Title
+Bookly: A Local Service Booking E-Commerce Platform
+
+Group Members
+- Vincent Elpedez
+- Louis Mari Demata
+- Marc Yuan Laureles
+- John Einstein Sison
+
+GitHub Repository
+https://github.com/VincentLuke2002/Bookly
+
+Live Deployment
+https://bookly-service-platform.onrender.com
+
+Safe Demonstration Accounts
+- Customer
+  Email: user@bookly.local
+  Password: User123!
+  Access: Browse providers, save a wishlist, create bookings, checkout, and manage orders.
+
+- Provider
+  Email: provider@bookly.local
+  Password: Provider123!
+  Access: Manage a public provider profile, services, and customer booking requests.
+
+- Administrator
+  Email: admin@bookly.local
+  Password: Admin123!
+  Access: Manage users, provider applications, provider status, and all bookings.
+
+Hosted Website Instructions
+1. Open the live deployment URL in a modern browser.
+2. A free Render instance can take approximately 30 to 60 seconds to wake after inactivity.
+3. Select Log in and use one of the demonstration accounts above.
+4. Do not enter real personal, payment, or financial information.
+
+Local Setup Instructions
+1. Install Node.js 24 or newer.
+2. Open a terminal in the Bookly project folder.
+3. Run: npm install
+4. Run: npm start
+5. Open: http://127.0.0.1:5500
+
+Technical Notes
+- The application uses a Node.js HTTP server and SQLite database.
+- The database and demonstration data are created automatically on first start.
+- The free hosted service uses temporary filesystem storage, so newly created accounts and bookings can reset after a restart or redeployment.
+- All listed credentials are demonstration-only accounts created specifically for project evaluation.
