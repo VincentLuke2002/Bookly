@@ -1,0 +1,6 @@
+data/*.db
+data/*.db-shm
+data/*.db-wal
+website/graphify-out/
+node_modules/
+*.log

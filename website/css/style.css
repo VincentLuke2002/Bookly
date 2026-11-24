@@ -471,3 +471,35 @@ label { display: block; margin: 0 0 7px; color: var(--primary); font-size: 0.78r
 
 @media(max-width:991px){.catalog-toolbar{grid-template-columns:1fr}.auth-page{grid-template-columns:1fr}.auth-visual{min-height:480px}.security-grid{grid-template-columns:1fr}.security-wide{grid-column:auto}.admin-shell{grid-template-columns:78px 1fr}.admin-sidebar .brand span:last-child,.admin-sidebar nav button{font-size:0}.admin-sidebar nav button::first-letter{font-size:1rem}.admin-exit{font-size:0}.admin-kpis{grid-template-columns:1fr 1fr}.admin-grid{grid-template-columns:1fr}.wf-mobile-row{overflow-x:auto;justify-content:flex-start}}
 @media(max-width:767px){.catalog-meta,.history-toolbar{align-items:stretch;flex-direction:column}.history-toolbar .input-bookly{max-width:none}.payment-tabs{grid-template-columns:1fr}.choice-card{grid-template-columns:auto auto 1fr}.choice-card b{grid-column:3}.auth-visual{min-height:390px;padding:45px 24px}.auth-panel{padding:45px 20px}.admin-main{padding:20px 15px}.admin-kpis{grid-template-columns:1fr}.admin-table{overflow-x:auto}.admin-table-row{min-width:780px}.wf-hero,.wf-detail,.wf-auth,.wf-cart,.wf-checkout{grid-template-columns:1fr}.wf-three{grid-template-columns:repeat(2,1fr)}.wf-four{grid-template-columns:repeat(2,1fr)}.wireframe-card>header{grid-template-columns:auto 1fr}.wireframe-card>header>b{grid-column:2}.order-head,.order-body{align-items:flex-start;grid-template-columns:1fr;flex-direction:column}.order-head div{flex-wrap:wrap}.order-actions{flex-wrap:wrap}}
+
+/* Full-stack local application */
+.nav-logout { border: 0; background: transparent; color: var(--muted); font-size: .78rem; font-weight: 700; }
+.nav-logout:hover { color: var(--coral); }
+.form-error { margin-bottom: 16px; padding: 12px 14px; border: 1px solid #efb5a8; border-radius: 10px; background: #fff2ef; color: #9d2f1b; font-size: .86rem; }
+.demo-credentials { display: grid; gap: 4px; margin-top: 20px; padding: 14px; border-radius: 12px; background: var(--surface-muted); color: var(--muted); }
+.demo-credentials strong { color: var(--primary); }
+.demo-credentials small { font-size: .72rem; }
+.auth-card-wide { max-width: 660px; }
+.provider-signup-fields { margin: 20px 0; padding: 18px; border: 1px solid var(--line); border-radius: 14px; }
+.provider-signup-fields legend { width: auto; padding: 0 7px; color: var(--primary); font: 600 1.1rem Fraunces,serif; }
+.loading-state,.empty-inline { padding: 25px; color: var(--muted); text-align: center; }
+.status.declined,.status.cancelled,.status.suspended { background: #fbe0dc; color: #9d2f1b; }
+.status.active { background: #dff3ed; color: #166a59; }
+.admin-table-row select,.admin-table-row button { min-width: 0; border: 1px solid var(--line); border-radius: 7px; padding: 7px; background: white; color: var(--primary); }
+.admin-table-row button:hover { border-color: var(--coral); color: var(--coral); }
+.admin-table-live > [id] > .admin-table-row:first-child { border-top: 1px solid var(--line); }
+.provider-panel { display: none; }
+.provider-panel.active { display: block; animation: panelIn .2s ease; }
+.provider-kpis { grid-template-columns: repeat(4,1fr); }
+.provider-table .admin-table-row { grid-template-columns: 2fr 1fr 1fr .7fr; }
+.bookly-dialog { width: min(600px,calc(100% - 30px)); border: 0; border-radius: 18px; padding: 0; box-shadow: var(--shadow-lg); }
+.bookly-dialog::backdrop { background: rgba(4,35,45,.65); backdrop-filter: blur(4px); }
+.bookly-dialog form { padding: 28px; }
+.dialog-head { display: flex; align-items: start; justify-content: space-between; margin-bottom: 22px; }
+.dialog-head h2 { margin: 7px 0 0; color: var(--primary); }
+.dialog-head > button { border: 0; background: transparent; color: var(--muted); font-size: 2rem; line-height: 1; }
+.toast-error { border-color: #efb5a8; }
+.provider-admin-row { grid-template-columns: 1.5fr 1fr .7fr .7fr .9fr .5fr; }
+
+@media(max-width:991px){.provider-kpis{grid-template-columns:1fr 1fr}.nav-logout{display:none}}
+@media(max-width:767px){.provider-kpis{grid-template-columns:1fr}.auth-card-wide{max-width:none}.admin-header{align-items:flex-start;gap:16px}.admin-user{display:none}}

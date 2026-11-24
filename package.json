@@ -1,0 +1,14 @@
+{
+  "name": "bookly-local",
+  "version": "3.0.0",
+  "private": true,
+  "description": "Local full-stack service booking platform with customer, provider, and admin roles.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node tests/api-smoke.mjs"
+  },
+  "engines": {
+    "node": ">=22.5.0"
+  }
+}

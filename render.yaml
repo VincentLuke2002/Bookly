@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: bookly-service-platform
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    autoDeployTrigger: commit
+    envVars:
+      - key: NODE_VERSION
+        value: 24.11.0
+      - key: HOST
+        value: 0.0.0.0

@@ -1,45 +1,66 @@
-BOOKLY — PROGRESS REPORT 2
+BOOKLY — LOCAL FULL-STACK SYSTEM
 
-This folder contains the initial front-end implementation of the Bookly service-commerce platform using HTML5, CSS3, JavaScript, Bootstrap 5, and browser localStorage.
+Bookly is a responsive service-booking marketplace with a local Node.js API,
+SQLite database, and three protected account modes: customer, provider, and
+administrator. No cloud database or live payment gateway is required.
 
-START
-Open website/index.html in a browser. For best results, serve the website folder with a local web server (for example: python -m http.server 8000).
+REQUIREMENTS
+- Node.js 22.5 or newer (Node.js 24 LTS recommended)
+- Internet access is optional, but is needed to load Bootstrap, Google Fonts,
+  and the remote Unsplash photography used by the design.
 
-PAGES
-- index.html: responsive home, navigation, hero, categories, process, promotion, calls to action, footer
-- products.html: searchable/filterable service and provider listing
-- product-details.html: provider details and configurable booking
-- cart.html: persistent booking cart and order totals
-- checkout.html: customer and payment form with confirmation state (demonstration only)
-- account.html: bookings, saved providers, and profile panels
-- design-system.html: visual identity, colour, type, controls, cards, icons, and photography
-- login.html / register.html: secure user-access wireframes with validation
-- account-security.html: password, two-step verification, and trusted-device management
-- wishlist.html / order-history.html: saved providers and persistent order records
-- help.html: FAQ and contact-support interface
-- admin.html: admin dashboard, product management, and order management wireframes
-- wireframes.html: complete low-fidelity desktop and mobile e-commerce wireframe set
+START THE WEBSITE
+1. Double-click start-bookly.bat
+2. Open http://127.0.0.1:5500
 
-ENHANCED COMMERCE FEATURES
-- Catalog filtering, search, five sorting modes, and persistent wishlist
-- Cart quantity/hour controls with automatic subtotal and total computation
-- Standard, priority, and remote fulfilment methods with estimates
-- Card/online, e-wallet, and pay-on-service payment selections
-- Local order confirmation and order-history storage
-- Responsive storefront, account, checkout, admin, and wireframe layouts
+You can also open a terminal in this folder and run:
+  npm start
+
+Do not open website/index.html directly. The application needs the local server
+for login, account permissions, bookings, and database access.
+
+LOCAL DEMO ACCOUNTS
+- Customer: user@bookly.local / User123!
+- Provider: provider@bookly.local / Provider123!
+- Admin: admin@bookly.local / Admin123!
+
+DATA
+- The SQLite database is created automatically at data/bookly.db.
+- Demo users, providers, and services are inserted only when the database is new.
+- Passwords are salted and hashed with scrypt.
+- Sessions use HTTP-only cookies and expire after seven days.
+- Card numbers and e-wallet credentials are not stored.
+- The booking cart stays in the browser until checkout. Confirmed bookings,
+  accounts, profiles, services, and wishlists are saved in SQLite.
+
+ACCOUNT MODES
+- Customer: register, log in, edit profile/password, browse providers, use the
+  wishlist, book services, choose fulfilment/payment method, view or cancel orders.
+- Provider: apply for an account, manage public profile and services, review
+  booking requests, and change booking status. New applications require admin approval.
+- Admin: view system totals, approve/disable providers, create providers, manage
+  users, and update all booking statuses.
+
+MAIN FILES
+- server.js: local server, database schema, seeded data, API, authentication
+- website/: all responsive pages, CSS, and browser JavaScript
+- data/bookly.db: generated SQLite database (ignored by Git)
+- documentation/: submitted progress-report PDF files
+- start-bookly.bat: Windows launcher
+
+TESTS
+Run from a terminal in this folder:
+  npm test
+
+The automated smoke test uses a separate ignored test database.
 
 DESIGN SYSTEM
-Store name: Bookly
-Primary ocean: #123B4A
-Secondary teal: #207F73
-Accent coral: #F26B4F
-Background mist: #F7F8F6
-Text: #132B30
-Border: #DCE5E2
-Heading font: Fraunces
-Body/UI font: DM Sans
-
-NOTES
-- External font, Bootstrap, and photography assets load from CDNs and require internet access.
-- Checkout is an interface prototype and does not submit or process real payments.
-- Cart information is stored locally in the browser.
+- Store: Bookly
+- Primary ocean: #123B4A
+- Secondary teal: #207F73
+- Accent coral: #F26B4F
+- Background mist: #F7F8F6
+- Text: #132B30
+- Border: #DCE5E2
+- Heading font: Fraunces
+- Body/UI font: DM Sans
