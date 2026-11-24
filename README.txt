@@ -11,8 +11,7 @@ REQUIREMENTS
 
 START THE WEBSITE
 1. Double-click start-bookly.bat
-2. Open https://bookly-service-platform.onrender.com/
-Bookly — Trusted services, booked simply
+2. Open https://bookly-service-platform.onrender.com
  
 
 You can also open a terminal in this folder and run:
