@@ -2,25 +2,20 @@ BOOKLY — LOCAL FULL-STACK SYSTEM
 
 Bookly is a responsive service-booking marketplace with a local Node.js API,
 SQLite database, and three protected account modes: customer, provider, and
-administrator. No cloud database or live payment gateway is required.
+administrator. No live payment gateway is required.
 
-REQUIREMENTS
-- Node.js 22.5 or newer (Node.js 24 LTS recommended)
-- Internet access is optional, but is needed to load Bootstrap, Google Fonts,
-  and the remote Unsplash photography used by the design.
+
 
 START THE WEBSITE
-1. Double-click start-bookly.bat
-2. Open https://bookly-service-platform.onrender.com
+1. Open https://bookly-service-platform.onrender.com
  
 
 You can also open a terminal in this folder and run:
   npm start
 
-Do not open website/index.html directly. The application needs the local server
-for login, account permissions, bookings, and database access.
 
-LOCAL DEMO ACCOUNTS
+
+DEMO ACCOUNTS
 - Customer: user@bookly.local / User123!
 - Provider: provider@bookly.local / Provider123!
 - Admin: admin@bookly.local / Admin123!
